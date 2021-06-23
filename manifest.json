@@ -1,0 +1,22 @@
+{
+    "name": "Crypto Tracker",
+    "description": "Track Crypto with a click!",
+    "version": "1.0",
+    "manifest_version": 3,
+    "background": {
+        "service_worker": "background.js"
+    },
+    "permissions": [
+        "storage",
+        "identity"
+    ],
+
+    "oauth2": {
+        "client_id": "14023778138-4g2ofhe2m6mhjb8hbgfnrr3l3o92s2lo.apps.googleusercontent.com",
+        "scopes":["https://www.googleapis.com/auth/gmail.readonly"]
+      },
+    
+    "action": {
+        "default_popup": "popup/login.html"
+    }
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Crypto Tracker</title>
+    
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css"> 
+
+    <!-- imported chart.js and bootstrap js files -->
+    <script src="popup.js" defer type="module"></script>
+
+</head>
+
+<body>
+
+    <!-- <div class="header">
+        <h1 class="title">Crypto Tracker</h1>
+        <h4 class="description">Track Crypto with a single Cick!</h4>
+    </div> -->
+
+    <div class="p-4">
+        Welcome to crypto Tracker!
+
+        <form>
+            <select name="coin-type" id="coin-type">
+                <option value="btc">Bitcoin</option>
+                <option value="eth">Ethereum</option>
+            </select>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <section class="sec1">
+        <div class="container">
+            <canvas class="chart" width="400" height="400"></canvas>
+            <button class="btn">Click Me</button>
+        </div>
+    </section>
+    
+</body>
+</html>
