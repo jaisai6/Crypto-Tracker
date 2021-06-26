@@ -1,4 +1,3 @@
-
 window.onload = function () {
 
     chrome.storage.sync.get("signedIn", ({ signedIn }) => {

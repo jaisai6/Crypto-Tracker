@@ -1,15 +1,10 @@
 import '../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js';
 import '../node_modules/chart.js/dist/chart.js';
 
-// Api key
-const API_KEY = "d757e183-077e-4896-9bdf-8750014526b8";
+
 
 // Initialize button with user's preferred color
 const changeColor = document.querySelector('.btn');
-
-chrome.storage.sync.get("color", ({ color }) => {
-  changeColor.style.background = color;
-});
 
 chrome.storage.sync.get("email", ({ email }) => {
     console.log(email);
