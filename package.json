@@ -1,20 +1,26 @@
 {
-  "name": "cryptotracker-test",
+  "name": "crypto_tracker",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Web extension which tracks the prices of cryptocurrencies.",
+  "main": "background.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jaisai6/Crypto-Tracker.git"
+  },
   "keywords": [],
-  "type": "module",
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jaisai6/Crypto-Tracker/issues"
+  },
+  "homepage": "https://github.com/jaisai6/Crypto-Tracker#readme",
   "dependencies": {
-    "bootstrap": "^5.0.1",
-    "chart.js": "^3.3.2",
-    "crypto": "^1.0.1",
-    "dotenv": "^10.0.0",
-    "shrimpy-node": "^0.2.15"
+    "bootstrap": "^5.0.2",
+    "browserify": "^17.0.0",
+    "cryptocurrency-icons": "^0.17.2",
+    "dotenv": "^10.0.0"
   }
 }

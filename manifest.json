@@ -11,12 +11,11 @@
         "identity"
     ],
 
-    "oauth2": {
-        "client_id": "14023778138-4g2ofhe2m6mhjb8hbgfnrr3l3o92s2lo.apps.googleusercontent.com",
-        "scopes":["https://www.googleapis.com/auth/gmail.readonly"]
-      },
+    "host_permissions": [
+        "https://*/*"
+    ],
     
     "action": {
-        "default_popup": "popup/login.html"
+        "default_popup": "popup/popup.html"
     }
 }

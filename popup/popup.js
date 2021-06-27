@@ -1,53 +1,18 @@
 import '../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js';
-import '../node_modules/chart.js/dist/chart.js';
 
 
+chrome.storage.local.get('coinDetails', ({coinDetails}) => {
 
-// Initialize button with user's preferred color
-const changeColor = document.querySelector('.btn');
+    console.log(coinDetails.length);
 
-chrome.storage.sync.get("email", ({ email }) => {
-    console.log(email);
-  });
-
-// console.log("Hello");
-
-var ctx = document.querySelector('.chart');
-
-var myChart = new Chart(ctx, {
-type: 'bar',
-data: {
-    labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-    datasets: [{
-        label: '# of Votes',
-        data: [12, 19, 3, 5, 2, 3],
-        backgroundColor: [
-            'rgba(255, 99, 132, 0.2)',
-            'rgba(54, 162, 235, 0.2)',
-            'rgba(255, 206, 86, 0.2)',
-            'rgba(75, 192, 192, 0.2)',
-            'rgba(153, 102, 255, 0.2)',
-            'rgba(255, 159, 64, 0.2)'
-        ],
-        borderColor: [
-            'rgba(255, 99, 132, 1)',
-            'rgba(54, 162, 235, 1)',
-            'rgba(255, 206, 86, 1)',
-            'rgba(75, 192, 192, 1)',
-            'rgba(153, 102, 255, 1)',
-            'rgba(255, 159, 64, 1)'
-        ],
-        borderWidth: 1
-    }]
-},
-options: {
-    scales: {
-        y: {
-            beginAtZero: true
-        }
-    }
-}
+    coinDetails.forEach(coinDetail => {
+        console.log(coinDetail.coinName, coinDetail.coinSymbol, coinDetail.coinIcon);
+    });
 });
+
+// Modify the DOM to display the list of coins.
+
+
 
 
 
