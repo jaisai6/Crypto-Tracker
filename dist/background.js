@@ -53,7 +53,8 @@ chrome.runtime.onInstalled.addListener(() => {
                 let item = {};
                 item.coinName = coin.name;
                 item.coinSymbol = coin.symbol;
-
+                item.price = coin.priceUsd;
+                
                 // For coinIcon
                 let symbol = coin.symbol.toLowerCase();
                 let requiredPath = genericPath + `${symbol}.svg`;
