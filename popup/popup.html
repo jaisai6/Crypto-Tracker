@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Crypto Tracker</title>
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400&display=swap" rel="stylesheet">
     <!-- bootstrap -->
-    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css"> 
-
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="popup.css">
     <!-- imported chart.js and bootstrap js files -->
     <script src="popup.js" defer type="module"></script>
 
@@ -21,25 +24,82 @@
         <h1 class="title">Crypto Tracker</h1>
         <h4 class="description">Track Crypto with a single Cick!</h4>
     </div> -->
+    <div class="container-main">
+        <h1 class="title">Welcome to Crypto Tracker!</h1>
 
-    <div class="p-4">
-        Welcome to crypto Tracker!
+        <div class="input-group rounded">
+            <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
 
-        <form>
-            <select name="coin-type" id="coin-type">
-                <option value="btc">Bitcoin</option>
-                <option value="eth">Ethereum</option>
-            </select>
-
-            <button type="submit">Submit</button>
-        </form>
-    </div>
-
-    <section class="sec1">
-        <div class="container">
-            <canvas class="chart" width="400" height="400"></canvas>
         </div>
-    </section>
-    
+
+        <hr class="dropdown-divider" />
+
+        <table class="table">
+            <thead class="table-head">
+                <tr>
+                    <th class="head-logo"></th>  
+                    <th class="head-name">Name</th>
+                    <th class="head-symbol">Symbol</th>
+                    <th class="head-price">Price</th>
+                </tr>
+            </thead>
+            <tbody class="table-body">
+                <!-- <tr class="table-item">
+                    <td class="item-logo">
+                        <img class="item-logo" src="../logo/logo.svg" alt="btc logo">
+                    </td>        
+                    <td class="item-name">Bitcoin</td>
+                    <td class="item-symbol">BTC</td>
+                    <td class="item-price">$32,330</td>
+                </tr> -->
+                <!-- <tr class="table-item">
+                    <td class="item-name" href="#">Another action</td>
+                    <td class="item-symbol">BTC</td>
+                    <td class="item-price">$32,330</td>
+                </tr>
+                <tr class="table-item">
+                    <td class="item-name" href="#">Something else here</td>
+                    <td class="item-symbol">BTC</td>
+                    <td class="item-price">$32,330</td>
+                </tr>
+                <tr class="table-item">
+                    <td class="item-name" href="#">Something else here</td>
+                    <td class="item-symbol">BTC</td>
+                    <td class="item-price">$32,330</td>
+                </tr>
+                <tr class="table-item">
+                    <td class="item-name" href="#">Something else here</td>
+                    <td class="item-symbol">BTC</td>
+                    <td class="item-price">$32,330</td>
+                </tr>
+                <tr class="table-item">
+                    <td class="item-name" href="#">Something else here</td>
+                    <td class="item-symbol">BTC</td>
+                    <td class="item-price">$32,330</td>
+                </tr> -->
+            </tbody>
+
+        </table>
+        <!-- <ul class="search-dropdown">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+        </ul> -->
+
+    </div>
+    <!-- <div class="chart-container"><canvas class="chart" width="300" height="300"></canvas></div> -->
+    <!-- <div style="height:560px; background-color: #FFFFFF; overflow:hidden; box-sizing: border-box; border: 1px solid #56667F; border-radius: 4px; text-align: right; line-height:14px; font-size: 12px; font-feature-settings: normal; text-size-adjust: 100%; box-shadow: inset 0 -20px 0 0 #56667F;padding:1px;padding: 0px; margin: 0px; width: 100%;"><div style="height:540px; padding:0px; margin:0px; width: 100%;"><iframe src="https://widget.coinlib.io/widget?type=chart&theme=light&coin_id=859&pref_coin_id=1505" width="100%" height="536px" scrolling="auto" marginwidth="0" marginheight="0" frameborder="0" border="0" style="border:0;margin:0;padding:0;line-height:14px;"></iframe></div><div style="color: #FFFFFF; line-height: 14px; font-weight: 400; font-size: 11px; box-sizing: border-box; padding: 2px 6px; width: 100%; font-family: Verdana, Tahoma, Arial, sans-serif;"><a href="https://coinlib.io" target="_blank" style="font-weight: 500; color: #FFFFFF; text-decoration:none; font-size:11px">Cryptocurrency Prices</a>&nbsp;by Coinlib</div></div> -->
+    <!-- <div class="container-chart">
+        <div class="container-chart" style="height:540px; padding:0px; margin:0px; width: 100%;">
+            <iframe class="chart" src="https://widget.coinlib.io/widget?type=chart&theme=dark&coin_id=859&pref_coin_id=1505" width="100%" height="536px" scrolling="auto" marginwidth="0" marginheight="0" frameborder="0" border="0" style="border:0;margin:0;padding:0;line-height:14px;">
+            </iframe>
+        </div>
+
+    </div> -->
+
 </body>
+
 </html>

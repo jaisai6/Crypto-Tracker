@@ -3,12 +3,16 @@
     "description": "Track Crypto with a click!",
     "version": "1.0",
     "manifest_version": 3,
+    "icons": {        
+        "128": "logo/logo128.png"            
+      },
     "background": {
         "service_worker": "background.js"
     },
     "permissions": [
         "storage",
-        "identity"
+        "identity",
+        "alarms"
     ],
 
     "host_permissions": [
