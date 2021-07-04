@@ -1,5 +1,5 @@
 
-# ![Logo](./logo/logo.svg?raw=true) Crypto Tracker
+# ![Logo](./logo/logo128.png?raw=true) Crypto Tracker
 
 A Chrome Extension for tracking crypto currencies with ease.
 
