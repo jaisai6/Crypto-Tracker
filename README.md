@@ -36,9 +36,9 @@ In chrome browser goto chrome://extensions/ and load the extension.
   
 ## Screenshots
 
-![App Screenshot](./Screenshots/0.png?raw=true)
-![App Screenshot](./Screenshots/1.png?raw=true)
-![App Screenshot](./Screenshots/2.png?raw=true)
+![App Screenshot](./Screenshots/0.jpg?raw=true)
+![App Screenshot](./Screenshots/1.jpg?raw=true)
+![App Screenshot](./Screenshots/2.jpg?raw=true)
 
   
 ## TODO
