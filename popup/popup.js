@@ -50,10 +50,29 @@ function CreateTable()
         row.appendChild(symbol);
         row.appendChild(price);
 
-        //APPENDING TD TO TD
+        // Add event listener to each row...
+        row.addEventListener('click', (e) => {
+          // Get the parent of the row which is clicked...
+          const parentRow = e.target.parentNode;
+
+          // Access the name of the coin
+          const symbol = parentRow.childNodes[2].textContent;
+
+          // console.log(name);
+          displayChart(symbol);
+        });
+
+        //APPENDING TD TO TR
         dropdown.appendChild(row);
 
     });
+
+    // Display Chart function...
+    function displayChart(symbol){
+      console.log('You clicked on: ', symbol);
+      sessionStorage.setItem('symbol', symbol);
+      location.assign('chart.html');
+    }
     
     
     searchInputDropdown = document.querySelector('.form-control');
@@ -64,12 +83,7 @@ function CreateTable()
         filterData();
     });
       
-    dropdown.addEventListener('click',(e)=>{
-          // console.log(e);
-        //   if( e.path[0]!= null && e.path[0].className === 'table-item')
-        //       searchInputDropdown.value = e.path[0].textContent;
-        //   filterData();
-    }) ;
+   
 
     images.forEach(image=>{
       image.addEventListener('error',()=>{
@@ -109,12 +123,7 @@ function UpdateTable()
         filterData();
     });
       
-    dropdown.addEventListener('click',(e)=>{
-          // console.log(e);
-        //   if( e.path[0]!= null && e.path[0].className === 'table-item')
-        //       searchInputDropdown.value = e.path[0].textContent;
-        //   filterData();
-    }) ;
+  
 });
 };
 
@@ -125,7 +134,7 @@ function UpdateTable()
 
 // Initiate an "Alarm" function to send "get-data" message to background.js and update the data displayed in frontend
 
-chrome.alarms.create('get-crypto-data', {delayInMinutes: 0.5, periodInMinutes: 1});
+chrome.alarms.create('get-crypto-data', {delayInMinutes: 1, periodInMinutes: 1});
 
 
 // Listen to the response from background.js after the alarm

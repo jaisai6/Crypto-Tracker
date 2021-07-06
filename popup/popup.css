@@ -6,9 +6,9 @@
     --dark-muted: #2d383c;
     --muted: #414c50;
     --width-logo: 30px;
-    --width-name: 130px;
-    --width-symbol: 50px;
-    --width-price: 130px;
+    --width-name: 145px;
+    --width-symbol: 125px;
+    --width-price: 145px;
 }
 
 /* width */
@@ -44,12 +44,13 @@
 * {
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
+    box-sizing: border-box !important;
     font-family: 'Nunito Sans', sans-serif;
 }
 
 body {
-    min-width: 360px;
+    min-width: 400px;
+    /* min-height: 500px ; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -82,8 +83,8 @@ body {
     width: calc(var(--width-logo)+var(--width-name)+var(--width-price)+var(--width-symbol));
     padding: 0;
     margin: 0;
-    max-height: 300px;
-    overflow-y: scroll;
+    /* max-height: 500px ; */
+    
     color: white;
     /* border: 1px solid  black; */
     /* border-right: unset; */
@@ -95,8 +96,9 @@ body {
 .table-head {
     background: var(--dark-muted);
     color: white;
-
-    width: calc(var(--width-logo)+var(--width-name)+var(--width-price)+var(--width-symbol));
+    /* height: var(--width-logo);
+    line-height: var(--width-logo); */
+    width: calc(var(--width-logo)+var(--width-name)+var(--width-price)+var(--width-symbol) + 16px);
 }
 
 th {
@@ -117,10 +119,12 @@ th {
 
 .head-symbol {
     width: var(--width-symbol);
+    text-align: center;
 }
 
 .head-price {
     width: var(--width-price);
+    text-align: center;
 }
 
 td,
@@ -128,6 +132,17 @@ th {
     border-bottom: 1px solid var(--bg);
     border-collapse: collapse;
     vertical-align: text-bottom;
+}
+
+.table-body {
+    display: block;
+    max-height: 330px;
+    overflow-y: scroll;
+    scroll-snap-type:y mandatory ;
+}
+
+.table-item {
+    scroll-snap-align: start;
 }
 
 .table-body tr {
@@ -147,23 +162,23 @@ th {
 }
 
 .item-name {
-    min-width: var(--width-name);
+    width: var(--width-name);
 }
 
 .item-symbol {
     text-align: center;
-    min-width: var(--width-symbol);
+    width: var(--width-symbol);
 }
 
 .item-price {
-    min-width: var(--width-price);
+    width: var(--width-price);
     text-align: center;
 }
 
 .container-main {
     padding: 2em 2em 1em 2em;
     /* position: absolute; */
-    min-width: 400px;
+    min-width: 360px;
     z-index: 1;
 }
 
